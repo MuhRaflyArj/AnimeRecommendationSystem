@@ -6,7 +6,7 @@ Muhammad Rafly Arjasubrata
 ### Latar Belakang
 Rekomendasi anime telah menjadi aspek penting dalam platform streaming dan komunitas anime online. Dengan jumlah anime yang terus berkembang, menemukan anime yang sesuai dengan preferensi user semakin menantang. Sistem rekomendasi yang efektif dapat membantu user menemukan konten yang mereka sukai, meningkatkan kepuasan user, dan keterlibatan dalam platform.
 
-[![Header](./asset/header.webp)](./asset/header.webp)
+[![Header](asset/header.webp)](asset/header.webp)
 
 ### Urgensi Penelitian
 Penelitian ini penting karena membantu dalam mengembangkan sistem rekomendasi yang dapat meningkatkan pengalaman user dengan memberikan rekomendasi anime yang relevan dan personal. Dengan menggunakan pendekatan kombinasi **Collaborative Filtering** dan **Content-Based Filtering**, sistem ini dapat memberikan rekomendasi yang lebih akurat dan komprehensif, bahkan ketika data user terbatas.
@@ -36,7 +36,7 @@ Untuk mendukung pembuatan solusi yang diusulkan dalam **Solution Statement**, be
 ### Dataset Yang Digunakan
 Sumber : <a href='https://www.kaggle.com/datasets/CooperUnion/anime-recommendations-database'>Link Kaggle</a>
 
-Dataset "Anime Recommendations Database" berisi preferensi dari 73,516 user terhadap 12,294 anime berbeda yang terdiri dari dua file CSV: anime.csv dan rating.csv. File anime.csv berisi daftar judul anime dengan atribut seperti genre, tipe, jumlah episode, rating, dan jumlah anggota. Sementara itu, rating.csv berisi data penilaian pengguna terhadap berbagai anime, yang dapat digunakan untuk membangun sistem rekomendasi berbasis kolaboratif. Dataset ini cocok untuk mengembangkan dan menguji model rekomendasi anime.
+Dataset "Anime Recommendations Database" berisi preferensi dari 73,516 user terhadap 12,294 anime berbeda yang terdiri dari dua file CSV: anime.csv dan rating.csv. File anime.csv berisi daftar judul anime dengan atribut seperti genre, tipe, jumlah episode, rating, dan jumlah anggota. Sementara itu, rating.csv berisi data penilaian user terhadap berbagai anime, yang dapat digunakan untuk membangun sistem rekomendasi berbasis kolaboratif. Dataset ini cocok untuk mengembangkan dan menguji model rekomendasi anime.
 
 #### `anime.csv`
 |Baris|Kolom|
@@ -119,13 +119,13 @@ Ukuran table setelah penggabungan adalah `[7813727, 9]`
 
 #### **`Top 5 Anime Berdasarkan Banyaknya Rating`**
 
-[![Top 5 Anime Berdasarkan Banyaknya Rating](./asset/top5rating.png)](./asset/top5rating.png)
+[![Top 5 Anime Berdasarkan Banyaknya Rating](asset/top5rating.png)](asset/top5rating.png)
 
 Barchart di atas menunjukkan anime jumlah rating tertinggi. Hal ini mengindikasikan anime yang populer dan disukai oleh kalangan user. Informasi ini dapat digunakan sebagai dasar rekomendasi bagi user baru, khususnya mereka yang belum memiliki history menonton maupun history rating. Dengan demikian sistem rekomendasi dapat memberikan saran awal yang menarik dan relevan berdasarkan anime yang disukai di kalangan user.
 
 #### **`Top 5 Anime Berdasarkan Jumlah Anggota Komunitas`**
 
-[![Top 5 Anime Berdasarkan Jumlah Anggota Komunitas](./asset/top5komunitas.png)](./asset/top5komunitas.png)
+[![Top 5 Anime Berdasarkan Jumlah Anggota Komunitas](asset/top5komunitas.png)](asset/top5komunitas.png)
 
 Anime seperti **Death Note**, **Shingeki no Kyojin**, dan **Sword Art Online** menempati posisi tertinggi juga pada jumlah komunitas. Hal tersebut mengindikasikan bahwa anime yang memiliki jumlah rating yang tinggi juga cenderung memiliki komunitas user yang besar. Dengan memanfaatkan data popularitas berdasarkan rating dan jumlah anggota komunitas, sistem rekomendasi dapat memberikan saran yang lebih akurat dan relevan bagi user.
 
@@ -137,7 +137,7 @@ Terdapat dua rating yang terdapat pada DataFrame gabungan, yaitu **Rating Websit
 
 **Rating User** merujuk pada rating yang diberikan oleh user terhadap anime tertentu. Data ini lebih spesifik dan mencerminkan preferensi suatu user.
 
-[![Distribusi Rating](./asset/distribusirating.png)](./asset/distribusirating.png)
+[![Distribusi Rating](asset/distribusirating.png)](asset/distribusirating.png)
 
 **Rating Website** cenderung terpusat pada nilai 6 hingga 9, dengan puncak sekitar 7 dan 8. Ini menunjukkan bahwa anime secara umum dinilai cukup baik oleh user di seluruh komunitas, dengan sebagian besar mendapatkan penilaian rata-rata yang cukup tinggi. Sedangkan **Rating User** cenderung banyak yang menilai pada jangka 8 hingga 10. Hal ini dapat mencerminkan bahwa hanya anime dengan kualitas tertentu yang menarik cukup perhatian untuk dinilai secara luas.
 
@@ -147,19 +147,19 @@ Jumlah rating yang menonjol pada nilai yang tinggi dapat disebabkan oleh positiv
 
 #### **`Korelasi Antara Rating Anime dan Jumlah Membernya`**
 
-[![Korelasi Antara Rating dan Member](./asset/korelasiratingmember.png)](./asset/korelasiratingmember.png)
+[![Korelasi Antara Rating dan Member](asset/korelasiratingmember.png)](asset/korelasiratingmember.png)
 
 Scatterplot di atas menunjukkan bahwa tidak ada korelasi linear yang kuat antara rating dan jumlah member. Meskipun anime dengan jumlah anggota yang banyak cenderung memiliki rating yang cukup baik, popularitas anime tidak selalu berbanding lurus dengan ratingnya. Ini mengindikasikan bahwa **terdapat faktor lain yang menentukan popularitas anime, selain dari rating yang diterima**
 
 #### **`Persebaran Format Distribusi Anime`**
 
-[![Persebaran format Distribusi Anime](./asset/persebaranformatdistribusi.png)](./asset/persebaranformatdistribusi.png)
+[![Persebaran format Distribusi Anime](asset/persebaranformatdistribusi.png)](asset/persebaranformatdistribusi.png)
 
 Persebaran pada distribusi format seperti **TV**, **OVA**, dan **Movie** menunjukkan bahwa user memiliki preferensi dalam menikmati konten anime. Oleh karena itu, sistem rekomendasi harus lebih fleksibel dan mampu memberikan rekomendasi yang bervariasi berdasarkan preferensi user terhadap berbagai format distribusi.
 
 #### **`Persebaran Jumlah Episode`**
 
-[![Persebaran Jumlah Episode](./asset/persebaranepisode.png)](./asset/persebaranepisode.png)
+[![Persebaran Jumlah Episode](asset/persebaranepisode.png)](asset/persebaranepisode.png)
 
 Dari histogram jumlah episode anime, terlihat bahwa mayoritas anime memiliki jumlah episode yang sedikit, dengan puncak pada rentang 0 hingga 50. Ini menunjukkan bahwa sebagian besar anime dibuat dalam format pendek. Hanya sedikit anime yang memiliki lebih dari 100 episode. Distribusi ini mengindikasikan bahwa format munsim pendek sangat umum, dengan banyak serial yang dibuat dalam 12-13 episode (satu musim pendek) atau 24-26 episode (dua musim pendek).
 
@@ -167,13 +167,13 @@ Informasi ini penting karena menunjukkan perlunya memprioritaskan rekomendasi an
 
 #### **`Persebaran Jumlah Rating yang Diberikan User`**
 
-[![Persebaran Jumlah Rating yang Diberikan User](./asset/persebaranratingdiberikan.png)](./asset/persebaranratingdiberikan.png)
+[![Persebaran Jumlah Rating yang Diberikan User](asset/persebaranratingdiberikan.png)](asset/persebaranratingdiberikan.png)
 
 Dari histogram di atas, terlihat jelas bahwa partisipasi userdalam memberikan rating sangat bervariasi, tetapi mayoritas cenderung memberikan hanya sedikit rating. Ini dapat berarti bahwa meskipun basis user besar, kontribusi mereka dalam penilaian mungkin terbatas. Dengan banyak penggun amasih memberikan sedikit rating, ini menciptakan masalah sparsity dalam data, yang dapat mempengaruhi akurasi model rekomendasi.
 
 #### **`Persebaran Jumlah Rating oleh User yang Diterima Anime`**
 
-[![Persebaran Jumlah Rating oleh User yang Diterima Anime](./asset/persebaranratingditerima.png)](./asset/persebaranratingditerima.png)
+[![Persebaran Jumlah Rating oleh User yang Diterima Anime](asset/persebaranratingditerima.png)](asset/persebaranratingditerima.png)
 
 Dari histogram di atas, terlihat jelas bahwa popularitas anime sangat bervariasi, tetapi mayoritas anime cenderung menerima sedikit rating. Ini dapat berarti bahwa meskipun ada banyak anime yang tersedia, hanya beberapa yang benar-benar populer di kalangan user. Hal ini juga menciptakan masalah sparsity dalam data, yang dapat mempengaruhi akurasi model.
 
@@ -193,42 +193,36 @@ Mayoritas anime memiliki jumlah episode yang relatif sedikit, dengan puncak pada
 4. **Persebaran Rating yang Diberikan** <br>
 Terlihat jelas bahwa partisipasi user dalam memberikan rating dan popularitas anime sangat bervariasi, tetapi mayoritas user dan anime cenderung menerima sedikit rating. Ini mengindikasikan bahwa meskipun basis user besar dan banyak anime yang tersedia, kontribusi user dalam memberikan rating mungkin terbatas dan hanya beberapa anime yang benar-benar populer saja yang mendapatkan rating dari user itu sendiri. `Dengan banyaknya user dan anime yang menerima sedikit rating, ini menciptakan masalah sparsity dalam data, yang dapat mempengaruhi akurasi model rekomendasi. 
 
-## Data Preprocessing
+## Data Preperation
 
-### Data Preprocessing untuk **Collaborative Filtering**
+### Pembagian Data Latih dan Data Uji
+Pembagian data menjadi data latih dan data uji bertujuan untuk mengevaluasi kinerja model secara objektif dan mencegah overfitting. **Data Latih** digunakan untuk melatih model sehingga dapat mengenali pola dan hubungan dalam data, sedangkan data uji digunakan untuk menguji model yang telah dilatih untuk menilai performa dan generalisasi model tersebut.
+
+Data uji yang digunakan sebesar $1\%$ dari keseluruhan data (dari 1,000,000 data), mengingat banyaknya jumlah data dan terdapat masalah keterbatasan komputasi saat melakukan pengujian.
+
+### Data Preperation untuk **Collaborative Filtering**
 Dalam **Collaborative Filtering**, format dat yang digunakan adalah matrix user-anime, dimana setiap baris mewakili user dan kolom mewakili anime dengan value di dalam matriks menunjukkan rating yang diberikan oleh user tersebut.
 
-Terdapat beberapa langkah data preprocessing untuk mengonversi data mentah untuk memastikan integritas dan keakuratan data dan membuat format matrix user-anime. Berikut adalah langkah-langkah yang dilakukan dalam data preprocessing untuk Collaborative Filtering:
+Terdapat beberapa langkah data preperation untuk mengonversi data mentah untuk memastikan integritas dan keakuratan data dan membuat format matrix user-anime. Berikut adalah langkah-langkah yang dilakukan dalam data preperation untuk Collaborative Filtering:
 
 1. **Penghapusan Rating tidak Valid** <br>
 user yang tidak melakukan rating akan dihapus karena data tersebut tidak berarti dalam Collaborative Filtering yang akan dibangun dan akan menyebabkan meningkatnya noise dan tingkat komputasi yang dibutuhkan. Penghapusan dilakukan dengan melihat nilai kolom rating pada `rating.csv`. Jika nilai rating -1, maka data akan dihapus.
 
-<div style="display: flex;" align='center'>
-<div style="flex: 25%; padding: 10px;">
-</div>
-<div style="flex: 25%; padding: 10px;">
-    Sebelum penghapusan rating tidak valid
-    <table>
-        <tr><th>user_id</th><th>anime_id</th><th>rating</th></tr>
-        <tr><td>5</td><td>67</td><td>7</td></tr>
-        <tr><td>5</td><td>68</td><td>9</td>
-        </tr><tr><td>5</td><td>132</td><td>-1</td></tr>
-        <tr><td>5</td><td>136</td><td>-1</td></tr>
-        <tr><td>5</td><td>137</td><td>6</td></tr>
-    </table>
-</div>
-<div style="flex: 25%; padding: 10px;">
-    Setelah penghapusan rating tidak valid
-    <table>
-        <tr><th>user_id</th><th>anime_id</th><th>rating</th></tr>
-        <tr><td>5</td><td>67</td><td>7</td></tr>
-        <tr><td>5</td><td>68</td><td>9</td>
-        <tr><td>5</td><td>137</td><td>6</td></tr>
-    </table>
-</div>
-<div style="flex: 25%; padding: 10px;">
-</div>
-</div>
+Sebelum penghapusan rating tidak valid
+| user_id | anime_id | rating |
+|---------|----------|--------|
+| 5       | 67       | 7      |
+| 5       | 68       | 9      |
+| 5       | 132      | -1     |
+| 5       | 136      | -1     |
+| 5       | 137      | 6      |
+
+Setelah penghapusan rating tidak valid
+| user_id | anime_id | rating |
+|---------|----------|--------|
+| 5       | 67       | 7      |
+| 5       | 68       | 9      |
+| 5       | 137      | 6      |
 
 2. **Penghapusan Data Duplikat** <br>
 Baris data yang duplikat hanya menambahkan bias dimana seolah-olah ada duat data atau lebih user yang berbeda memberikan suatu rating, namun nyatanya data tersebut hanya merepresentasikan satu user saja.
@@ -252,9 +246,52 @@ Berikut adalah tabel setelah penggabungan
     </table>
     </div>
 
-### Data Preprocessing untuk **Content-Based Filtering**
+#### Data Yang Digunakan
+Kolom `user_id` digunakan untuk mengidentifikasi suatu user, sedangkan `anime_id` mengidentifikasi suatu anime, dan `rating_user` menyediakan informasi tentang penilaian user terhadap suatu anime. Informasi ini cukup untuk membentuk matrix user-anime atau pivot table yang menjadi dasar model. Kolom lain seperti genre atau jumlah episode tidak diperlukan karena pada Collaborative Filtering berfokus pada pola kesamaan antara user dengan user lain.
 
-Model **Content-Based Filtering** memerlukan data yang deskriptif tentang item yang direkomendasikan. Dalam konteks anime, model ini akan merekomendasikan anime kepada user bedasarkan kesamaan antara anime yang telah dinikmati oleh user dan karakteristik dari anime lainnya. Oleh karena itu, dilakukan pengolahan pada data untuk membuat data anime yang dapat diterima oleh model content-based yang dibuat. Berikut adalah preprocessing yang dilakukan.
+Berikut adalah contoh tabel data yang digunakan
+|user_id|anime_id|rating_user|
+|-------|--------|-----------|
+|3|5113|10|
+|11|5113|9|
+|12|5113|8|
+|17|5113|7|
+|19|5113|9|
+
+### Pivot Table
+Dalam collaborative Filtering, pivot table digunakan untuk menyusun informasi user dan anime dalam format matriks, dimana baris mewakili anime dan kolom mewakili user. Nilai dalam pivot table ini adalah rating yang diberikan user terhadap itemtersebut, dimana 0 berarti user belum memberikan rating terhadap anime tersebut.
+
+**Tujuan Pivot Table**
+1. **Struktur Data yang Jelas**. Mengorganisasi data sehingga hubungan antara anime dan user menjadi jelas.
+2. **Kemudahan Perhitungan**. Mempermudah perhitungan kesamaan antara user karena dapat direpresentasikan menjadi vektor.
+
+Terdapat **dua pivot table** yang akan dibuat, yaitu :
+
+`allPivot` yang merupakan pivot table yang dibuat dari seluruh data rating user. Ini digunakan untuk memastikan bahwa semua informasi rating tersedia dan digunakan untuk memprediksi dalam model rekomendasi.
+
+`trainPivot` yang merupakan table yang dibuat dari data latih. Ini digunakan untuk melatih model rekomendasi, sehingga model dapat menanganin pola-pola dalam data rating yang ada. Dengan memisahkan data latih, kinerja model dapat diukur secara objektif.
+
+Berikut adalah contoh pivot table yang dibuat, dimana $x$ adalah `user_id `dan $y$ adalah `anime_id`
+
+| |3|5|7|8|11|...|121|122|123|
+|-|-|-|-|-|--|---|---|---|---|
+|**1**|0|0|3|4|1|...|9|10|8|
+|**5**|10|0|2|8|0|...|0|4|0|
+|**9**|0|7|0|0|3|...|10|7|0|
+
+Pivot table yang dibuat memiliki ukuran **(4565 $\times$ 7756)**
+
+### Compressed Sparse Row (CSR)
+CSR adalah format penyimpanan matriks yang digunakan untuk menyimpan sparse matrix secara efisien dalam memori. CSR terdiri dari tiga komponen utama, yaitu :
+1. **Data**. Merupakan array satu dimensi yang berisi semua elemen nol dari matriks
+2. **Indices**. Array satu dimensi yang berisi indeks kolom untuk setiap elemen dalam array data
+3. **Index Pointer**. Array satu dimensi yang berisi indek sdalam array data yang memulai setiap baris dari matriks.
+
+Format CSR digunakan oleh `SciKit-Learn Nearest Neighbor` sebagai input data latih. Ini memungkinkan model untuk memanfaatkan struktur data yang lebih ringan dan lebih cepat dibandingkan pivot table.
+
+### Data Preperation untuk **Content-Based Filtering**
+
+Model **Content-Based Filtering** memerlukan data yang deskriptif tentang item yang direkomendasikan. Dalam konteks anime, model ini akan merekomendasikan anime kepada user bedasarkan kesamaan antara anime yang telah dinikmati oleh user dan karakteristik dari anime lainnya. Oleh karena itu, dilakukan pengolahan pada data untuk membuat data anime yang dapat diterima oleh model content-based yang dibuat. Berikut adalah preperation yang dilakukan.
 
 1. **Membersihkan Judul Anime** <br>
 Judul anime sering kali memiliki tanda baca, spasi tambahan, atau kata-kata yang tidak relevan untuk dijadikan fitur. Membersihkan judul dari hal tersebut dapat dilakukan dengan bantuan RegEx, dimana `akan diterapkan beberapa pola RegEx pada setiap judul anime pada data`. Berikut adalah contoh judul anime sebelum dan sesudah pembersihan
@@ -317,42 +354,33 @@ Kolom tipe `diubah ke dalam lowercase` agar konsisten dengan seluruh fitur pada 
 7. **Pengkategorian Episode, Rating dan Member** <br>
 Pengkategorisasian bertujuan untuk mengubah nilai numerik dari jumlah episode menjadi kategori yang lebih bermakna. Ini penting dilakukan karena model yang dibangun bekerja lebih efektif untuk memproses teks atau kategori daripada nilai numerik mentah. Dengan mengkategorisasikan jumlah episode, informasi tersebut menjadi lebih relevan dan memungkinkan membandingkan kesamaan antara anime berdasrkan kategori tertentu. berikut adalah kategorisasi yang dilakukan
 
-    <div style="display: flex;" align='center'>
-    <div style="flex: 33%; padding: 10px;">
-        <b>Kategorisasi Episode</b>
-        <table>
-            <tr><th>range</th><th>kategori</th></tr>
-            <tr><td>1</td><td>movie</td></tr>
-            <tr><td>>= 2 & <= 6</td><td>ova ona</td></tr>
-            <tr><td>>= 7 & <= 12</td><td>short</td></tr>
-            <tr><td>>= 13 & <= 26</td><td>medium</td></tr>
-            <tr><td>>= 27 & <= 50</td><td>long</td></tr>
-            <tr><td>>50</td><td>marathon</td></tr>
-        </table>
-    </div>
-    <div style="flex: 33%; padding: 10px;">
-        <b>Kategorisasi Rating</b>
-        <table>
-            <tr><th>range</th><th>kategori</th></tr>
-            <tr><td>0</td><td>no rating</td></tr>
-            <tr><td>>= 1 & < 5</td><td>bad</td></tr>
-            <tr><td>>= 5 & < 7</td><td>mid</td></tr>
-            <tr><td>>= 7 & < 8.5</td><td>good</td></tr>
-            <tr><td>>= 8.5 & <= 10</td><td>excellent</td></tr>
-        </table>
-    </div>
-    <div style="flex: 33%; padding: 10px;">
-        <b>Kategorisasi Member</b>
-        <table>
-            <tr><th>range</th><th>kategori</th></tr>
-            <tr><td><= 1000</td><td>no rating</td></tr>
-            <tr><td>> 1000 & <= 10000</td><td>bad</td></tr>
-            <tr><td>>10000 & <= 50000</td><td>mid</td></tr>
-            <tr><td>> 50000 & <= 100000</td><td>good</td></tr>
-            <tr><td>> 100000</td><td>excellent</td></tr>
-        </table>
-    </div>
-    </div>
+**Kategorisasi Episode**
+| range         | kategori |
+|---------------|----------|
+| 1             | movie    |
+| >= 2 & <= 6   | ova ona  |
+| >= 7 & <= 12  | short    |
+| >= 13 & <= 26 | medium   |
+| >= 27 & <= 50 | long     |
+| >50           | marathon |
+
+**Kategorisasi Rating**
+| range          | kategori  |
+|----------------|-----------|
+| 0              | no rating |
+| >= 1 & < 5     | bad       |
+| >= 5 & < 7     | mid       |
+| >= 7 & < 8.5   | good      |
+| >= 8.5 & <= 10 | excellent |
+
+**Kategorisasi Member**
+| range               | kategori  |
+|---------------------|-----------|
+| <= 1000             | no rating |
+| > 1000 & <= 10000   | bad       |
+| >10000 & <= 50000   | mid       |
+| > 50000 & <= 100000 | good      |
+| > 100000            | excellent |
 
 8. **Penggabungan Data** <br>
 Penggabungan data bertujuan untuk menggabungkan berbagai fitur dari anime seperti judul, genre, kategori episode, dll menjadi satu teks yang komprehensif. Penggabungan ini penting untuk membuat satu kolom fitur yang memiliki seluruh informasi terkait suatu anime, yang kemudian dapat digunakan dalam model content based untuk menganalisis kesamaan antar anime.
@@ -368,17 +396,12 @@ Penggabungan data bertujuan untuk menggabungkan berbagai fitur dari anime sepert
     | gintama  action comedy historical parody samurai sci-fi shounen marathon excellent famous                            |
 
 
-## Modeling
+## Model and Result
 Terdapat beberapa model yang dibuat baik untuk Collaborative Filtering maupun Content-Based Filtering. Pembuatan beberapa model dilakukan untuk mengevaluasi dan mencari model terbaik.
 
 ```
 Karena keterbatasan komputasi, hanya 1,000,000 data diambil pada data rating
 ```
-
-### Data Latih dan Data Uji
-Pembagian data menjadi data latih dan data uji bertujuan untuk mengevaluasi kinerja model secara objektif dan mencegah overfitting. **Data Latih** digunakan untuk melatih model sehingga dapat mengenali pola dan hubungan dalam data, sedangkan data uji digunakan untuk menguji model yang telah dilatih untuk menilai performa dan generalisasi model tersebut.
-
-Data uji yang digunakan sebesar $1\%$ dari keseluruhan data (dari 1,000,000 data), mengingat banyaknya jumlah data dan terdapat masalah keterbatasan komputasi saat melakukan pengujian.
 
 ### Model Collaborative Filtering
 Collaborative Filtering adalah teknik dalam sistem rekomendasi yang menggunakan pola perilaku dan preferensi user untuk memprediksi anime yang mungkin disukai oleh user lain. Teknik ini memanfaatkan data rating yang diberikan user pada berbagai anime untuk menemukan kesamaan dalam preferensi dan memberikan rekomendasi yang relevan.
@@ -393,49 +416,6 @@ Collaborative Filtering adalah teknik dalam sistem rekomendasi yang menggunakan 
 2. **Cold Start Problem**. Sulit memberikan rekomendasi akurat untuk user baru atau anime baru yang belum banyak memiliki rating. 
 3. **Scalability**. Mengelola dan menghitung kesamaan dalam dataset besar dapat membutuhkan tingkat komputasi yang tinggi.
 
-#### Data Yang Digunakan
-Kolom `user_id` digunakan untuk mengidentifikasi suatu user, sedangkan `anime_id` mengidentifikasi suatu anime, dan `rating_user` menyediakan informasi tentang penilaian user terhadap suatu anime. Informasi ini cukup untuk membentuk matrix user-anime atau pivot table yang menjadi dasar model. Kolom lain seperti genre atau jumlah episode tidak diperlukan karena pada Collaborative Filtering berfokus pada pola kesamaan antara user dengan user lain.
-
-Berikut adalah contoh tabel data yang digunakan
-|user_id|anime_id|rating_user|
-|-------|--------|-----------|
-|3|5113|10|
-|11|5113|9|
-|12|5113|8|
-|17|5113|7|
-|19|5113|9|
-
-### Pivot Table
-Dalam collaborative Filtering, pivot table digunakan untuk menyusun informasi user dan anime dalam format matriks, dimana baris mewakili anime dan kolom mewakili user. Nilai dalam pivot table ini adalah rating yang diberikan user terhadap itemtersebut, dimana 0 berarti user belum memberikan rating terhadap anime tersebut.
-
-**Tujuan Pivot Table**
-1. **Struktur Data yang Jelas**. Mengorganisasi data sehingga hubungan antara anime dan user menjadi jelas.
-2. **Kemudahan Perhitungan**. Mempermudah perhitungan kesamaan antara user karena dapat direpresentasikan menjadi vektor.
-
-Terdapat **dua pivot table** yang akan dibuat, yaitu :
-
-`allPivot` yang merupakan pivot table yang dibuat dari seluruh data rating user. Ini digunakan untuk memastikan bahwa semua informasi rating tersedia dan digunakan untuk memprediksi dalam model rekomendasi.
-
-`trainPivot` yang merupakan table yang dibuat dari data latih. Ini digunakan untuk melatih model rekomendasi, sehingga model dapat menanganin pola-pola dalam data rating yang ada. Dengan memisahkan data latih, kinerja model dapat diukur secara objektif.
-
-Berikut adalah contoh pivot table yang dibuat, dimana $x$ adalah `user_id `dan $y$ adalah `anime_id`
-
-| |3|5|7|8|11|...|121|122|123|
-|-|-|-|-|-|--|---|---|---|---|
-|**1**|0|0|3|4|1|...|9|10|8|
-|**5**|10|0|2|8|0|...|0|4|0|
-|**9**|0|7|0|0|3|...|10|7|0|
-
-Pivot table yang dibuat memiliki ukuran **(4565 $\times$ 7756)**
-
-### Compressed Sparse Row (CSR)
-CSR adalah format penyimpanan matriks yang digunakan untuk menyimpan sparse matrix secara efisien dalam memori. CSR terdiri dari tiga komponen utama, yaitu :
-1. **Data**. Merupakan array satu dimensi yang berisi semua elemen nol dari matriks
-2. **Indices**. Array satu dimensi yang berisi indeks kolom untuk setiap elemen dalam array data
-3. **Index Pointer**. Array satu dimensi yang berisi indek sdalam array data yang memulai setiap baris dari matriks.
-
-Format CSR digunakan oleh `SciKit-Learn Nearest Neighbor` sebagai input data latih. Ini memungkinkan model untuk memanfaatkan struktur data yang lebih ringan dan lebih cepat dibandingkan pivot table.
-
 #### `Model dengan Euclidean Distance`
 Model dengan **Euclidean Distance** adalah metode dimana kesamaan antar user dihitung menggunakan metric Euclidean. Ini mengukur jarak garis lurus antara dua titik. dengan ini, Euclidean Distance digunakan untuk mengukur seberapa mirip dua user atau anime berdasarkan rating yang diberikan. Semakin kecil jarak Euclidean, semakin mirip user tersebut terhadap user lain. Jika dua user memberikan rating yang mirip, amaka jarak Euclidean antara mereka akan kecil. Berdasarkan ini, sistem rekomendasi dapat merekomendasikan anime yang disukai oleh satu user terhadap user lainnya.
 
@@ -447,33 +427,23 @@ User yang memiliki jarak euclidean yang kecil mengidikasikan kemiripan antara du
 3. **Memberikan Rekomendasi** <br>
 Setelah menemukan user yang mirip, sistem memberikan rekomendasi berdasarkan anime yang diberi rating tinggi oleh user serupa yang belum pernah dirating oleh user target.
 
-**Hasil Rekomendasi Yang Diberikan Untuk `user_id = 5`**
-<div style="display: flex;" align='center'>
-<div style="flex: 50%; padding: 10px;">
-<b>Hasil Rekomendasi</b><br>
-Dari Model Euclidean
-    <table>
-        <tr><th>anime_title</th><th>predicted_rating</th></tr>
-        <tr><td>Cowboy Bebop: Tengoku no Tobira	</td><td>8.40</td></tr>
-        <tr><td>FLCL</td><td>8.18</td></tr>
-        <tr><td>Trigun</td><td>8.00</td></tr>
-        <tr><td>Akira</td><td>8.00</td></tr>
-        <tr><td>Samurai Champloo</td><td>7.33</td></tr>
-    </table>
-</div>
-<div style="flex: 50%; padding: 10px;">
-<b>Top 5 Rating Oleh User</b> <br>
-Sebagai Referensi
-    <table>
-        <tr><th>anime_title</th><th>rating_user</th></tr>
-        <tr><td>Gintama Movie: Kanketsu-hen - Yorozuya yo Eien...</td><td>10</td></tr>
-        <tr><td>Great Teacher Onizuka</td><td>10</td></tr>
-        <tr><td>Steins;Gate	</td><td>9</td></tr>
-        <tr><td>Gintama&#039;</td><td>9</td></tr>
-        <tr><td>Gintama</td><td>9</td></tr>
-    </table>
-</div>
-</div>
+**Hasil Rekomendasi model Euclidean Distance**
+| anime_title                      | predicted_rating |
+|----------------------------------|------------------|
+| Cowboy Bebop: Tengoku no Tobira  | 8.40             |
+| FLCL                             | 8.18             |
+| Trigun                           | 8.00             |
+| Akira                            | 8.00             |
+| Samurai Champloo                 | 7.33             |
+
+**Top 5 rating oleh user (sebagai referensi)**
+| anime_title                                       | rating_user |
+|---------------------------------------------------|-------------|
+| Gintama Movie: Kanketsu-hen - Yorozuya yo Eien... | 10          |
+| Great Teacher Onizuka                             | 10          |
+| Steins;Gate	                                    | 9           |
+| Gintama&#039;                                     | 9           |
+| Gintama                                           | 9           |
 
 #### `Model dengan Cosine Simlarity`
 Model Collaborative Filtering dengan **Cosine Similarity **adalah metode dimana kesamaan antar user dihitung menggunakan metrik sudut cosine. Cosine Similarity mengukur kesamaan antara dua vektor dengan menghitung cosinus dari sudut di antara mereka. Ini sering digunakan karena mengabaikan magnitudo dan hanya mengabaikan pertimbangan orientasi, yang berguna dalam mengukur kesamaan pola rating meskipun skalanya berbeda.
@@ -489,32 +459,24 @@ User dengan nilai Cosine Similarity tertinggi dianggap sebagai yang paling mirip
 Setelah menemukan user yang memiliki pola yang serupa, sistem akan memberikan rekomendasi anime kepada user target bedarsarkan item yang dirating tinggi oleh user tersebut. Item yang belum ditonton oleh user target namun memiliki rating tinggi dari user serupa akan direkomendasikan.
 
 **Hasil Rekomendasi Yang Diberikan Untuk `user_id = 5`**
-<div style="display: flex;" align='center'>
-<div style="flex: 50%; padding: 10px;">
-<b>Hasil Rekomendasi</b><br>
-Dari Model Cosine Similarity
-    <table>
-        <tr><th>anime_title</th><th>predicted_rating</th></tr>
-        <tr><td>Cowboy Bebop: Tengoku no Tobira</td><td>8.40</td></tr>
-        <tr><td>FLCL</td><td>8.18</td></tr>
-        <tr><td>Trigun</td><td>8.00</td></tr>
-        <tr><td>Samurai Champloo</td><td>7.33</td></tr>
-        <tr><td>Neon Genesis Evangelion</td><td>4.50</td></tr>
-    </table>
-</div>
-<div style="flex: 50%; padding: 10px;">
-<b>Top 5 Rating Oleh User</b> <br>
-Sebagai Referensi
-    <table>
-        <tr><th>anime_title</th><th>rating_given</th></tr>
-        <tr><td>Gintama Movie: Kanketsu-hen - Yorozuya yo Eien...</td><td>10</td></tr>
-        <tr><td>Great Teacher Onizuka</td><td>10</td></tr>
-        <tr><td>Steins;Gate</td><td>9</td></tr>
-        <tr><td>Gintama&#039;</td><td>9</td></tr>
-        <tr><td>Gintama</td><td>9</td></tr>
-    </table>
-</div>
-</div>
+
+**Hasil rekomendasi model Cosine Similarity**
+| anime_title                     | predicted_rating |
+|---------------------------------|------------------|
+| Cowboy Bebop: Tengoku no Tobira | 8.40             |
+| FLCL                            | 8.18             |
+| Trigun                          | 8.00             |
+| Samurai Champloo                | 7.33             |
+| Neon Genesis Evangelion         | 4.50             |
+
+**Top 5 rating yang diberikan user (sebagai referensi)**
+| anime_title                                       | rating_given |
+|---------------------------------------------------|--------------|
+| Gintama Movie: Kanketsu-hen - Yorozuya yo Eien... | 10           |
+| Great Teacher Onizuka                             | 10           |
+| Steins;Gate                                       | 9            |
+| Gintama&#039;                                     | 9            |
+| Gintama                                           | 9            |
 
 #### `Fine Tuning Model dengan Weighted Euclidean Distance`
 **Fine Tuning dengan Weight** dalam sistem rekomendasi bertujuan untuk menyesuaikan weight pada berbagai aspek seperti genre, tipe, dan jumlah episode guna meningkatkan akurasi dan relevansi rekomendasi yang diberikan. Model **Euclidean Distance** dipilih untuk dilakukan fine tune karena `Model Euclidean Distance memiliki hasil yang lebih baik dibandingkan model Cosine Similarity`. Relevansi untuk digunakan weight adalah karena genre mungkin memiliki pengaruh besar karena user cenderung memiliki preferensi genre tertentu. Oleh karena itu, memberikan weight lebih tinggi pada genre dapat meningkatkan kualitas rekomendasi. Berikut adalah data faktor dari weight yang diberikan:
@@ -529,86 +491,71 @@ Jumlah episode dapat memengaruhi daya tarik suatu anime. Beberapa user lebih men
 **Pengaruh Weight dalam Hasil Rekomendasi** cukup signifikan. Weight yang diterapkan pada aspek-aspek tertentu dapat mengubah prioritas rekomendasi yang diberikan oleh sistem, Selain itu, finetuning weight dapat memungkinkan sistem untuk menyesuaikan rekomendasi berdasarkan tren dan preferensi yang sedang berkembang.
 
 **Weight yang Diberikan**
-    <div style="display: flex;" align='center'>
-    <div style="flex: 33%; padding: 10px;">
-        <b>Weight Genre</b>
-        <table>
-            <tr><th>Genre</th><th>Weight</th></tr>
-            <tr><td>Action</td><td>1.35</td></tr>
-            <tr><td>Adventure</td><td>1.3</td></tr>
-            <tr><td>Comedy</td><td>1.25</td></tr>
-            <tr><td>Drama</td><td>1.1</td></tr>
-            <tr><td>Fantasy</td><td>1</td></tr>
-            <tr><td>Romance</td><td>0.95</td></tr>
-            <tr><td>Sci-Fi</td><td>0.9</td></tr>
-            <tr><td>Slice of Life</td><td>0.875</td></tr>
-            <tr><td>Horror</td><td>0.85</td></tr>
-            <tr><td>Mystery</td><td>0.825</td></tr>
-        </table>
-    </div>
-    <div style="flex: 33%; padding: 10px;">
-        <b>Weight Type</b>
-        <table>
-            <tr><th>Type</th><th>Weight</th></tr>
-            <tr><td>TV</td><td>1.2</td></tr>
-            <tr><td>Movie</td><td>1.15</td></tr>
-            <tr><td>OVA</td><td>1.05</td></tr>
-            <tr><td>Special</td><td>1</td></tr>
-            <tr><td>ONA</td><td>0.95</td></tr>
-            <tr><td>Music</td><td>0.9</td></tr>
-        </table>
-    </div>
-    <div style="flex: 33%; padding: 10px;">
-        <b>Weight Episode</b>
-        <table>
-            <tr><th>Episodes</th><th>Weight</th></tr>
-            <tr><td>> 0 * <= 12</td><td>0.95</td></tr>
-            <tr><td>> 12 & <= 24</td><td>1.1</td></tr>
-            <tr><td>> 24 & <= 50</td><td>0.9</td></tr>
-            <tr><td>> 50 & <= 100</td><td>0.85</td></tr>
-            <tr><td>Lainnya</td><td>0.825</td></tr>
-        </table>
-    </div>
-    </div>
+
+**Weight Genre**
+| Genre         | Weight |
+|---------------|--------|
+| Action        | 1.35   |
+| Adventure     | 1.3    |
+| Comedy        | 1.25   |
+| Drama         | 1.1    |
+| Fantasy       | 1      |
+| Romance       | 0.95   |
+| Sci-Fi        | 0.9    |
+| Slice of Life | 0.875  |
+| Horror        | 0.85   |
+| Mystery       | 0.825  |
+<br>
+
+**Weight Type**
+| Type    | Weight |
+|---------|--------|
+| TV      | 1.2    |
+| Movie   | 1.15   |
+| OVA     | 1.05   |
+| Special | 1      |
+| ONA     | 0.95   |
+| Music   | 0.9    |
+<br>
+
+**Weight Episodes**
+| Episodes      | Weight |
+|---------------|--------|
+| > 0 * <= 12   | 0.95   |
+| > 12 & <= 24  | 1.1    |
+| > 24 & <= 50  | 0.9    |
+| > 50 & <= 100 | 0.85   |
+| Lainnya       | 0.825  |
 
 Kemudian setiap weight tersebut dikalikan dengan faktor tertentu untuk mengatur seberapa pengaruh setiap kategori. Berikut adalah parameter faktor yang akan diujikan dengan metode **Grid Search**
 
 |Faktor Genre|Faktor Type|Faktor Episodes|
 |------------|-----------|---------------|
-|0.15|1.65|0.875|
-|0.2|1.7|1.75|
-|0.25|1.75|0.825|
+|0.15        |1.65       |0.875          |
+|0.2         |1.7        |1.75           |
+|0.25        |1.75       |0.825          |
 
 **Hasil Rekomendasi Weighted Euclidean Distance**
 
 **Hasil Rekomendasi Yang Diberikan Untuk `user_id = 5`**
-<div style="display: flex;" align='center'>
-<div style="flex: 50%; padding: 10px;">
-<b>Hasil Rekomendasi</b><br>
-Dari Model Weighted Euclidean Distance
-    <table>
-        <tr><th>anime_title</th><th>predicted_rating</th></tr>
-        <tr><td>Cowboy Bebop: Tengoku no Tobira</td><td>8.32</td></tr>
-        <tr><td>Trigun</td><td>8.17</td></tr>
-        <tr><td>Akira</td><td>7.89</td></tr>
-        <tr><td>FLCL</td><td>7.53</td></tr>
-        <tr><td>Samurai Champloo</td><td>6.98</td></tr>
-    </table>
-</div>
-<div style="flex: 50%; padding: 10px;">
-<b>Hasil Rekomendasi tanpa Weight</b> <br>
-Sebagai Referensi
-    <table>
-        <tr><th>anime_title</th><th>predicted_rating</th></tr>
-        <tr><td>Cowboy Bebop: Tengoku no Tobira</td><td>8.40</td></tr>
-        <tr><td>FLCL</td><td>8.18</td></tr>
-        <tr><td>Trigun</td><td>8.00</td></tr>
-        <tr><td>Akira</td><td>8.00</td></tr>
-        <tr><td>Samurai Champloo</td><td>7.33</td></tr>
-    </table>
-</div>
-</div>
 
+Hasil rekomendasi model Weighted Euclidean Distance
+| anime_title                     | predicted_rating |
+|---------------------------------|------------------|
+| Cowboy Bebop: Tengoku no Tobira | 8.32             |
+| Trigun                          | 8.17             |
+| Akira                           | 7.89             |
+| FLCL                            | 7.53             |
+| Samurai Champloo                | 6.98             |
+
+Hasil rekomendasi model Euclidean Distance (sebagai referensi)
+| anime_title                     | predicted_rating |
+|---------------------------------|------------------|
+| Cowboy Bebop: Tengoku no Tobira | 8.40             |
+| FLCL                            | 8.18             |
+| Trigun                          | 8.00             |
+| Akira                           | 8.00             |
+| Samurai Champloo                | 7.33             |
 
 #### **Skema Pengujian**
 
@@ -628,51 +575,35 @@ Berdasarkan hasil pengujian, model **Collaborative Filtering** yang menggunakan 
 
 Berikut adalah hasil grid search nilai MAE pada model **Weighted Euclidean Distance**.
 
-<div style="display: flex;" align='center'>
-<div style="flex: 33%; padding: 10px;">
-    <table>
-        <tr><th>Genre</th><th>Type</th><th>Episodes</th><th>MAE</th></tr>
-        <tr><td>0.15</td><td>1.75</td><td>0.875</td><td>0.3750</td></tr>
-        <tr><td>0.15</td><td>1.75</td><td>0.900</td><td>0.3802</td></tr>
-        <tr><td>0.15</td><td>1.75</td><td>0.825</td><td>0.4006</td></tr>
-        <tr><td>0.15</td><td>1.70</td><td>0.900</td><td>0.3924</td></tr>
-        <tr><td>0.15</td><td>1.70</td><td>0.875</td><td>0.4148</td></tr>
-        <tr><td>0.15</td><td>1.70</td><td>0.825</td><td>0.4712</td></tr>
-        <tr><td>0.15</td><td>1.65</td><td>0.875</td><td>0.4887</td></tr>
-        <tr><td>0.15</td><td>1.65</td><td>0.900</td><td>0.4586</td></tr>
-        <tr><td>0.15</td><td>1.65</td><td>0.825</td><td>0.5646</td></tr>
-    </table>
-</div>
-<div style="flex: 33%; padding: 10px;">
-    <table>
-        <tr><th>Genre</th><th>Type</th><th>Episodes</th><th>MAE</th></tr>
-        <tr><td>0.20</td><td>1.70</td><td>0.900</td><td>0.3794</td></tr>
-        <tr><td>0.20</td><td>1.75</td><td>0.825</td><td>0.3804</td></tr>
-        <tr><td>0.20</td><td>1.70</td><td>0.875</td><td>0.3877</td></tr>
-        <tr><td>0.20</td><td>1.75</td><td>0.875</td><td>0.3883</td></tr>
-        <tr><td>0.20</td><td>1.75</td><td>0.900</td><td>0.4070</td></tr>
-        <tr><td>0.20</td><td>1.65</td><td>0.900</td><td>0.4184</td></tr>
-        <tr><td>0.20</td><td>1.70</td><td>0.825</td><td>0.4289</td></tr>
-        <tr><td>0.20</td><td>1.65</td><td>0.875</td><td>0.4445</td></tr>
-        <tr><td>0.20</td><td>1.65</td><td>0.825</td><td>0.5070</td></tr>
-    </table>
-</div>
-<div style="flex: 33%; padding: 10px;">
-    <table>
-        <tr><th>Genre</th><th>Type</th><th>Episodes</th><th>MAE</th></tr>
-        <tr><td>0.25</td><td>1.70</td><td>0.875</td><td>0.3838</td></tr>
-        <tr><td>0.25</td><td>1.75</td><td>0.825</td><td>0.3857</td></tr>
-        <tr><td>0.25</td><td>1.70</td><td>0.900</td><td>0.3917</td></tr>
-        <tr><td>0.25</td><td>1.65</td><td>0.900</td><td>0.3942</td></tr>
-        <tr><td>0.25</td><td>1.70</td><td>0.825</td><td>0.3996</td></tr>
-        <tr><td>0.25</td><td>1.65</td><td>0.875</td><td>0.4104</td></tr>
-        <tr><td>0.25</td><td>1.75</td><td>0.875</td><td>0.4193</td></tr>
-        <tr><td>0.25</td><td>1.75</td><td>0.900</td><td>0.4450</td></tr>
-        <tr><td>0.25</td><td>1.65</td><td>0.825</td><td>0.4605</td></tr>
-    </table>
-</div>
-</div>
-
+| Genre | Type | Episodes | MAE    |
+|-------|------|----------|--------|
+|**0.15**|**1.75**|**0.875**|**0.3750**|
+| 0.15  | 1.75 | 0.900    | 0.3802 |
+| 0.15  | 1.75 | 0.825    | 0.4006 |
+| 0.15  | 1.70 | 0.900    | 0.3924 |
+| 0.15  | 1.70 | 0.875    | 0.4148 |
+| 0.15  | 1.70 | 0.825    | 0.4712 |
+| 0.15  | 1.65 | 0.875    | 0.4887 |
+| 0.15  | 1.65 | 0.900    | 0.4586 |
+| 0.15  | 1.65 | 0.825    | 0.5646 |
+| 0.20  | 1.70 | 0.900    | 0.3794 |
+| 0.20  | 1.75 | 0.825    | 0.3804 |
+| 0.20  | 1.70 | 0.875    | 0.3877 |
+| 0.20  | 1.75 | 0.875    | 0.3883 |
+| 0.20  | 1.75 | 0.900    | 0.4070 |
+| 0.20  | 1.65 | 0.900    | 0.4184 |
+| 0.20  | 1.70 | 0.825    | 0.4289 |
+| 0.20  | 1.65 | 0.875    | 0.4445 |
+| 0.20  | 1.65 | 0.825    | 0.5070 |
+| 0.25  | 1.70 | 0.875    | 0.3838 |
+| 0.25  | 1.75 | 0.825    | 0.3857 |
+| 0.25  | 1.70 | 0.900    | 0.3917 |
+| 0.25  | 1.65 | 0.900    | 0.3942 |
+| 0.25  | 1.70 | 0.825    | 0.3996 |
+| 0.25  | 1.65 | 0.875    | 0.4104 |
+| 0.25  | 1.75 | 0.875    | 0.4193 |
+| 0.25  | 1.75 | 0.900    | 0.4450 |
+| 0.25  | 1.65 | 0.825    | 0.4605 |
 
 Dari hasil **Grid Search** diatas dapat dilihat bahwa weight berpengaruh terhadap performa model rekomendasi. Berdasarkan EDA yang sudah dilakukan, weight diberikan kepada **genre**, **type** dan, **episodes** tertentu dimana setiap kateogri diberikan weight tertentu berdasarkan nilai kategori tersebut. Rasio 0.15:1.75:0.875 untuk genre:type:episodes memiliki nilai MAE terkecil. Hal tersebut menandakan bahwa preferensi user cenderung memiliki preferensi terhadap tipe tertentu.
 
@@ -779,7 +710,7 @@ Hasil akhir model yang dibuat menunjukkan bahwa sistem rekomendasi yang dibangun
 
 ## Kesimpulan Akhir
 
-Berdasarkan hasil pengujian yang dilakukan, kesimpulan akhir dari penelitian ini adalah:
+Berdasarkan hasil pengujian yang dilakukan, kesimpulan akhir dari setiap model yang dibangun dari penelitian ini adalah:
 
 1. **Collaborative Filtering** <br>
 **Euclidean Distance** terbukti lebih efektif dibandingkan Cosine Similarity dalam sistem rekomendasi anime, hal tersebut ditunjukkan dengan nilai MAE yang lebih rendah. Model Euclidean Distance lebih sensitif terhadap perbedaan kecil dalam skala rating yang diberikan user, sehingga memberikan prediksi yang lebih akurat dan lebih mendekati rating aktual. Hal ini menunjukkan bahwa pada dataset ini, preferensi user mungkin lebih seragam, membuat model Euclidean Distance lebih relevan.
@@ -791,3 +722,16 @@ Hasil dari **Grid Search** menunjukkan bahwa pembobotan fitur genre, tipe, dan j
 Hasil analisis menunjukkan bahwa model dengan kernel **linear** dan **sigmoid** memberikan rekomendasi yang sama. Ini menandakan bahwa hubungan antar fitur dalam data cukup linear, sehingga model dengan kernel linear sudah mampu mengangkap pola yang ada seara efektif. Penggunaan kernel yang lebih kompleks seperti sigmoid tidak memberikan peningkatan performa yang signifikan pada kasus ini.
 
 Dengan menggabungkan kedua pendekatan ini, sistem rekomendasi menjadi lebih robust dan adaptif. **Collaborative Filtering** memberikan rekomendasi yang dipersonalisasi berdasarkan perilaku dan preferensi user lain, sementara **Content-Based Filtering** memastikan bahwa rekomendasi tetap relevan bahkan jika data user terbatas, dengan fokus pada kesamaan konten. Kerja sama antara kedua sistem ini memungkinkan pembuatan rekomendasi yang lebih holistik, menangkap preferensi user dari berbagai sudut pandang dan memberikan pengalaman user yang lebih kaya dan memuaskan.
+
+Beberapa kesimpulan penting juga dapat ditarik terkait problem statement, pencapaian goals dan dampak terhadap solution statement dari penelitian ini:
+
+1. **Menjawab Problem Statement** <br>
+Model rekomendasi yang dibangun dengan **Collaborative Filtering** dan **Content-Based Filtering** Masalah utama yang ingin diatasi adalah kesulitan dalam menemukan aime yang sesuai dengan preferensi user di tengah jumlah konten yang terus bertambah. Dengan menggunakan teknik ini, model dapat memberikan rekomendasi yang lebih personal dan relevan bagi user, bahkan dalam kasus di mana data user terbatas.
+
+2. **Keberhasilan dalam Mencapai Goals** <br>
+Tujuan utama dari penelitian ini adalah untuk meningkatkan kepuasan user dan meningkatkan keterlibatan mereka di platform dengan menyediakan rekomendasi anime yang akurat dan relevan. Berdasarkan hasil evaluasi model, terlihat bahwa model rekomendasi anime yang akurat dan relevan. Hal ini menunjukkan bahwa model berhasiil mencapai goals yang telah ditetapkan, yakni menyediakan rekomendasi yang sesuai dengan preferensi user.
+
+3. **Dampak terhadap Solution Statement** <br>
+Implementasi solusi yang dirancang dalam penelitian ini memiliki dampak positif yang signifikan terhadap Business Understanding yang diidentifikasi di awal penelitian. Dengan meningkatkan akurasi dan relevansi rekomendasi, model ini tidak hanya meningkatkan pengalaman user tetapi juga bgiterpotensi meningkatkan durasi kunjungan dan keterlibatan pada user di platform. Lebih jauh lagi, model ini dapat membantu platform dalam strategi retensi user dan meningkatkan peluang konversi untuk layanan berbayar yang diberikan platform. Dengan demikian, solusi yang diberikan tidak hanya efektif dalam hal teknis tetapi juga memberikan nilai tambah dari perspektif bisnis.
+
+Secara keseluruhan, penelitian ini berhasil memberikan kontribusi signifikan dalam mengembangkan sistem rekomendasi anime yang lebih baik, baik dari segi teknis maupun bisnis. Dengan hasil yang telah dicapai, penelitian ini diharapkan dapat menjadi dasasr bagi pengembangan sistem rekomendasi serupa di masa depan.
